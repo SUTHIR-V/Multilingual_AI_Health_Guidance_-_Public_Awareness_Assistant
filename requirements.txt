@@ -1,0 +1,11 @@
+streamlit
+groq
+langdetect
+deep-translator
+langchain
+langchain-community
+langchain-huggingface
+sentence-transformers
+faiss-cpu
+reportlab
+huggingface_hub
