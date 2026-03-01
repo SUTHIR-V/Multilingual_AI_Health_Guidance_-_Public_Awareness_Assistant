@@ -7,7 +7,7 @@ from groq import Groq
 from huggingface_hub import login
 # -------------------- CONFIG -------------------- #
 
-BASE_PATH = "/content/drive/MyDrive/health"
+BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 current_topic = None  # Advanced topic memory
 
@@ -28,7 +28,7 @@ def load_vectorstore():
     )
 
     vectorstore = FAISS.load_local(
-        f"{BASE_PATH}/faiss_index",
+        os.path.join(BASE_PATH, "faiss_index"),
         embeddings,
         allow_dangerous_deserialization=True
     )
