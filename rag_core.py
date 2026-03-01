@@ -4,7 +4,6 @@ from deep_translator import GoogleTranslator
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from groq import Groq
-from huggingface_hub import login
 # -------------------- CONFIG -------------------- #
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -17,9 +16,6 @@ def initialize_groq(api_key):
     global groq_client
     groq_client = Groq(api_key=api_key)
 
-hf_token = os.getenv("HF_TOKEN")
-if hf_token:
-    login(token=hf_token)
 # -------------------- LOAD RESOURCES -------------------- #
 
 def load_vectorstore():
