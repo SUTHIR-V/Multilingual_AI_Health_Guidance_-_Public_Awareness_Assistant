@@ -150,7 +150,7 @@ def ask_health_assistant(query):
 
     # -------- Generate Response -------- #
     response = groq_client.chat.completions.create(
-    model="llama-3.1-8b-instant",
+    model="llama-3.1-70b-versatile",
     messages=[
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": f"Context:\n{context}\n\nQuestion:\n{final_query}"}
