@@ -8,7 +8,7 @@ from huggingface_hub import login
 
 # -------------------- CONFIG -------------------- #
 
-BASE_PATH = "/content/drive/MyDrive/health"
+BASE_PATH = "."
 groq_client = None
 
 
